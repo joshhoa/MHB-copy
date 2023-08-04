@@ -1,0 +1,147 @@
+@use '../../styles/vars';
+
+.item {
+
+  &-list {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+    
+    &__loader {
+      align-self: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 5rem;
+      height: 5rem;
+      animation: rotation 2s infinite linear ;
+    }
+
+    &__empty {
+      margin: auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: vars.$gap-l;
+
+      &__button-back {
+        padding: vars.$gap-s;
+        background-color: vars.$primary;
+        border: #fff solid 2px;
+        border-radius: vars.$radius-l;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+  &-card {
+    width: 100%;
+    padding: vars.$gap-l vars.$gap-s;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$gap-m;
+    border-bottom: solid 2px vars.$white;
+
+    &:last-child {
+      border: none;
+    }
+    &__selected {
+      padding: 0;
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+
+      &-identity {
+        display: flex;
+        width: 60%;
+        gap: vars.$gap-s;
+        align-items: center;
+      }
+      
+      &-decorations {
+        display: flex;
+        gap: vars.$gap-s;
+        & img {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+      }
+    }
+
+
+    &__content {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: vars.$gap-m;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    &__button-add {
+      background-color: vars.$primary;
+      border: solid 1px vars.$white;
+      border-radius: vars.$radius-l;
+      padding: vars.$gap-s vars.$gap-xs;
+      color: #fff;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+      gap: vars.$gap-s;
+    }
+    
+    &__extra {
+      width: 100%;
+      height: auto;
+      border-top: solid 1px var(--bg-color);
+      padding: var(--gap-s);
+    }
+  }
+
+  &__button-add:hover {
+    color: #fff;
+  }
+
+
+
+
+  
+  &-stats {
+    display: flex;
+    gap: vars.$gap-xs;
+
+    &__other {
+      display: flex;
+      justify-content: flex-end;
+      gap: vars.$gap-m;
+    }
+    
+    & img {
+      width: 1rem;
+      height: 1rem;
+    }
+    
+    &__value {
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

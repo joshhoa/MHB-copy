@@ -1,0 +1,29 @@
+@use '../../../styles/vars';
+
+.item-card__footer {
+  
+  &__skill {
+    &-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: vars.$gap-s;
+      font-size: .8rem;
+    }
+    &-tag {
+      background-color: vars.$white;
+      color: vars.$dark-grey;
+      border: none;
+      border-radius: vars.$radius-m;
+      padding: vars.$gap-xs vars.$gap-s;
+      color: #fff;
+      text-shadow: #000000 0 0 8px;
+    }
+  }
+}
+
+.skill {
+  &-red {
+    background-color: vars.$skill-red;
+    color: vars.$white;
+  }
+}

@@ -1,0 +1,28 @@
+@use '../../styles/vars';
+
+.edit-profile {
+
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: vars.$gap-s;
+
+  }
+  &__title {
+    font-size: 1.2rem;
+  }
+
+  &__button {
+    background-color: vars.$purple;
+    text-transform: uppercase;
+    height: 2.5rem;
+    border: none;
+    border-radius: vars.$radius-m;
+    padding: vars.$gap-s;
+    color: #fff;
+    font-size: 1rem;
+  }
+}

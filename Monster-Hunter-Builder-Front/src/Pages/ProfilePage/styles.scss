@@ -1,0 +1,180 @@
+@use '../../styles/vars';
+
+.profile {
+  padding: vars.$gap-m;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: vars.$gap-l;
+
+  &-title {
+    font-size: vars.$font-l;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$gap-l;
+    align-items: center;
+
+    &__identity {
+      display: flex;
+      align-items: center;
+      gap: vars.$gap-l;
+    }
+
+    &__avatar {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 25%;
+      border: #948e8e solid;
+      padding: 5px;
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: center;
+      gap: vars.$gap-m;
+      position: relative;
+      width: 100%;
+      margin: auto;
+    }
+
+    &__logout, &__settings {
+      background-color: #fff;
+      border: solid 2px vars.$white;
+      border-radius: vars.$radius-s;
+      padding: vars.$gap-s;
+      display: flex;
+      align-items: center;
+      gap: vars.$gap-s;
+    }
+
+    &__settings-actions {
+      position: absolute;
+      bottom: -11rem;
+      display: flex;
+      flex-direction: column;
+      gap: vars.$gap-m;
+      background-color: vars.$grey;
+      border: vars.$white solid 2px;
+      border-radius: vars.$radius-m;
+      padding: vars.$gap-s;
+      width: 200px;
+      margin: auto;
+      z-index: 2;
+
+
+      & button {
+        width: 100%;
+        padding: vars.$gap-s;
+        border-radius: 5px;
+      }
+      
+      &__edit {
+        border-radius: none;
+        border: solid 2px;
+      }
+
+      &__delete {
+        color: vars.$error;
+        border: vars.$error solid 2px;
+        border-radius: none;
+      }
+      &__cancel {
+        color: vars.$white;
+        border: vars.$dark-grey solid 2px;
+        background-color: vars.$grey;
+
+        &:hover {
+          background-color: vars.$white;
+          color: vars.$dark-grey;
+        }
+      }
+    }
+
+  }
+
+  &__modal {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: vars.$gap-m;
+      padding: vars.$gap-m;
+    }
+    &-text {
+      text-align: center;
+      line-height: 1.2rem;
+    }
+    
+    &-confirm {
+      display: flex;
+      gap: vars.$gap-l;
+    }
+    &__button-delete {
+      background-color: vars.$error;
+      color: #fff;
+      padding: vars.$gap-s;
+      border-radius: vars.$radius-s;
+      border: #fff solid 2px;
+      
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: vars.$gap-m;
+    width: 90vw;
+    max-width: 500px;
+
+    &__loader {
+      margin-top: 3rem;
+      height: 3rem;
+      width: 3rem;
+      animation: rotation 2s linear;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: vars.$gap-m;
+      width: 100%;
+    }
+  }
+  
+  &-divider {
+    width: 90%;
+    height: 3px;
+    background-color: vars.$white;
+    margin: auto;
+    max-width: 500px;
+  }
+}
+
+@media (min-width : 769px) {
+
+  .profile {
+    justify-content: space-between;
+    &-header {
+      flex-direction: row;
+      max-width: 500px;
+      margin: auto;
+      &__identity {
+        width: 300rem;
+      }
+      &__actions {
+        flex-direction: column;
+      }
+      &__avatar {
+
+      }
+    }
+  }
+}

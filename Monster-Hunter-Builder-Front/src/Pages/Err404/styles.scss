@@ -1,0 +1,53 @@
+@use '../../styles/vars';
+
+.main_404 {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  font-weight: bold;
+}
+
+.err404 {
+
+  &__status {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+
+    &-campfire {
+      color: rgb(216, 110, 18);
+    }
+  }
+
+  &__gif{
+    margin-bottom: 3rem;
+
+    &-description {
+    font-size: 1.2rem;
+    }
+  }
+
+  &__back-homepage {
+    background-color: rgb(216, 110, 18);
+    padding: vars.$gap-s;
+    border-radius: vars.$radius-l;
+    display: block;
+    margin-top: 1rem;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: rgb(216, 110, 18);
+      border: solid 2px rgb(216, 110, 18);
+    }
+  }
+}

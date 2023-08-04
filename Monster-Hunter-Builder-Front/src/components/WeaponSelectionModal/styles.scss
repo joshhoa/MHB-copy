@@ -1,0 +1,18 @@
+@use '../../styles/vars';
+
+.item__go-back {
+  background-color: transparent;
+  border: vars.$white solid 2px;
+  border-radius: vars.$radius-l;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  translate: -50%;
+  padding: .3rem 1rem;
+
+  &__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: vars.$white;
+  }
+}

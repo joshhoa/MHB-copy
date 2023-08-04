@@ -1,0 +1,40 @@
+@use 'reset';
+@use 'vars';
+
+body {
+  font-family: sans-serif;
+  background-color: vars.$grey;
+}
+
+.main {
+  color: vars.$white;
+  min-height: 550px;
+}
+.is-inactive {
+  display: none !important;
+}
+
+.is-active {
+  display: block !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: vars.$light-grey;
+  border-radius: vars.$radius-m;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: vars.$blue-grey;
+  border-radius: vars.$radius-m;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: vars.$dark-grey;
+}

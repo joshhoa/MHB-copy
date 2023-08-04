@@ -1,0 +1,44 @@
+@use '../../styles/vars';
+
+.popup {
+  position: absolute;
+  top: -2rem;
+  margin: auto;
+  transition: .2s ease-in;
+  z-index: 10;
+  padding: vars.$gap-xs vars.$gap-m;
+  border-radius: vars.$radius-l;
+  display: flex;
+  gap: vars.$gap-s;
+  align-items: center;
+  color: #fff;
+
+  &-active {
+    top: 5rem;
+  }
+
+  &-error {
+    background-color: vars.$error;
+  }
+
+  &-success {
+    background-color: rgb(16, 138, 67);
+  }
+
+  &-neutral {
+    background-color: vars.$light-grey;
+  }
+
+  &-close {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}

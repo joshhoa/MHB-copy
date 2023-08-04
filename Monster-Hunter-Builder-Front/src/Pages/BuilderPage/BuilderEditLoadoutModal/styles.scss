@@ -1,0 +1,85 @@
+@use '../../../styles/vars';
+
+.edit-loadout {
+
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: vars.$gap-m;
+    width: 90%;
+    padding: vars.$gap-s;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+  }
+  
+  &__input {
+    padding: vars.$gap-s;
+    font-size: 1rem;
+    width: 90%;
+    max-width: 20rem;
+    
+    &-description {
+      padding: vars.$gap-s;
+      font-size: .9rem;
+      height: 5rem;
+      max-height: 500px;
+      overflow-y: scroll;
+      width: 90%;
+      max-width: 20rem;
+      font-family: sans-serif;
+    }
+  }
+
+  &__button {
+    display: flex;
+    gap: vars.$gap-l;
+
+    &-save, &-cancel {
+      text-transform: uppercase;
+      border: none;
+      border-radius: vars.$radius-m;
+      padding: vars.$gap-s;
+      vertical-align: center;
+    }
+
+    &-save {
+      background-color: vars.$purple;
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+
+  &__error {
+    padding: vars.$gap-m;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: vars.$gap-m;
+    &-text {
+      text-align: center;
+      line-height: 1.4rem;
+    }
+
+    &-login {
+      width: 5rem;
+      padding: vars.$gap-s;
+      border-radius: vars.$radius-s;
+      text-align: center;
+      background-color: vars.$purple;
+      color: vars.$white;
+
+    }
+
+    &-ok {
+      padding: vars.$gap-xs vars.$gap-m;
+      font-size: 1rem;
+      margin: auto;
+    }
+  }
+  
+}

@@ -1,0 +1,16 @@
+@use '../../styles/vars';
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  border-top: solid 2px vars.$dark-grey;
+  margin-top: auto;
+
+  background-color: vars.$grey;
+  &-copyright:hover {
+    color: vars.$primary;
+  }
+}

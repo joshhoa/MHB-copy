@@ -1,0 +1,74 @@
+@use '../../../styles/vars';
+
+.sharpness {
+  box-sizing: content-box;
+  background-color: #6c6767;
+  height: 10px;
+  width: 70%;
+  max-width: 250px;
+  border: solid vars.$light-grey;
+  display: flex;
+  &-red {
+    background-color: red;
+    height: inherit;
+
+  }
+  &-orange {
+    background-color: orange;
+    height: inherit;
+
+  }
+  &-yellow {
+    background-color: yellow;
+    height: inherit;
+
+  }
+  &-green {
+    background-color: green;
+    height: inherit;
+
+  }
+  &-blue {
+    background-color: blue;
+    height: inherit;
+
+  }
+  &-white {
+    background-color: white;
+    height: inherit;
+
+  }
+  &-purple {
+    background-color: purple;
+    height: inherit;
+
+  }
+}
+
+.item-stats {
+  &__weapon {
+    display: flex;
+    gap: vars.$gap-l;
+
+    & img {
+      width: 1.1rem;
+    }
+  }
+
+  &__neutral {
+    display: flex;
+    gap: vars.$gap-xs;
+    align-items: center;
+  }
+  &__elements{
+    display: flex;
+    gap: vars.$gap-m;
+    align-items: center;
+
+    &-one {
+      display: flex;
+      gap: vars.$gap-xs;
+      align-items: flex-end;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use '../../styles/vars';
+
+.item__button-add {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: vars.$gap-s;
+  background-color: vars.$grey;
+  color: vars.$white;
+  border: vars.$dark-grey solid 2px;
+  border-radius: vars.$radius-m;
+  &:hover {
+    background-color: vars.$primary;
+    cursor: pointer;
+  }
+  &__icon {
+    width: vars.$icon-width;
+  }
+}

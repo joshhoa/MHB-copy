@@ -1,0 +1,50 @@
+@use '../../styles/vars';
+
+.main_copyrights {
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: vars.$gap-s;
+}
+
+.copyrights {
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  &__content {
+    width: 80%;
+    max-width: 850px;
+    text-align: justify;
+    line-height: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$gap-l;
+    margin-bottom: 2rem;
+  }
+
+  &__website-name {
+    font-size: 1.3rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$gap-m;
+
+    &-category {
+      display: flex;
+      flex-direction: column;
+      gap: vars.$gap-xs;
+
+      &__name {
+        margin-left: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

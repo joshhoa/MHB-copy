@@ -1,0 +1,20 @@
+@use '../../../styles/vars';
+
+.weapon-type {
+  width: calc(50% - vars.$gap-s);
+  display: flex;
+  align-items: center;
+  gap: vars.$gap-s;
+  background-color: vars.$dark-grey;
+  cursor: pointer;
+  border: vars.$grey solid 2px;
+  color: vars.$white;
+  padding: vars.$gap-s;
+  border-radius: vars.$radius-m;
+  text-align: left;
+  
+  &:hover {
+    background-color: vars.$primary;
+    color: #fff;
+  }
+}

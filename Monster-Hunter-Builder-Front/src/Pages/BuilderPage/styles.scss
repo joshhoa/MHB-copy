@@ -1,0 +1,180 @@
+@use '../../styles/vars';
+
+.section{
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$gap-s;
+    padding: vars.$gap-s;
+    margin: auto;
+    max-width: 400px;
+
+    &__description {
+      text-align: center;
+    }
+
+    &__item .item-card {
+      color: #000;
+      
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  
+  &-modal__description {
+    display: none;
+  }
+
+  &-stats {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$gap-m;
+  max-width: 400px;
+  max-height: 100%;
+  overflow-y: scroll;
+  margin: 1rem auto;
+  padding: vars.$gap-s;
+
+  &__button {
+    background-color: transparent;
+    border: vars.$white solid 2px;
+    color: vars.$white;
+    font-size: 1.1rem;
+    border-radius: vars.$radius-m;
+
+    &:hover {
+      background-color: vars.$purple;
+      color: #fff;
+
+    }
+
+    &-edit__code {
+      color: #de7111;
+
+    }
+
+  }
+  }
+}
+.builder-main {
+  padding: vars.$gap-m;
+}
+
+@media (min-width: 769px) {
+  .builder-main {
+    display: flex;
+    justify-content: center;
+    gap: vars.$gap-l;
+    padding: vars.$gap-m;
+    margin-top: vars.$gap-m;
+    height: 80vh;
+    // min-height: 550px;
+    max-height: 850px;
+  }
+  .section {
+    &-items {
+      width: 50%;
+      max-width: 400px;
+      height: 100%;
+      overflow-y: scroll;
+      margin: 0;
+      position: relative;
+      border: vars.$dark-grey solid 2px;
+      padding-top: 0;
+      border-radius: vars.$radius-m;
+      
+      &__description {
+        position: sticky;
+        top: 0;
+        background-color: vars.$grey;
+        padding: vars.$gap-s;
+        border-bottom: solid 2px vars.$dark-grey;
+      }
+    }
+    &-stats {
+      width: 50%;
+      margin: 0;
+      max-width: 400px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+
+  .builder-main {
+    max-height: 850px;
+  }
+  .section-modal {
+    width: 30%;
+    max-width: 400px;
+    height: 100%;
+    border: vars.$dark-grey solid 2px;
+    border-radius: vars.$radius-m;
+    padding: vars.$gap-s;
+    padding-top: 0;
+    position: relative;
+    overflow-y: scroll;
+
+
+    &__description {
+      position: sticky;
+      top: 0;
+      display: block;
+      text-align: center;
+      border-bottom: solid 2px vars.$dark-grey;
+      padding: vars.$gap-s;
+      background-color: vars.$grey;
+      z-index: 1;
+    }
+
+    & .modal {
+      position: unset;
+      padding: 0;
+      width: 100%;
+      background-color: vars.$grey;
+      margin-top: .5rem;
+
+      &-backdrop {
+        padding: 0;
+        position: unset;
+        background-color: transparent;
+      }
+
+      &__button-close {
+        display: none;
+      }
+      & .weapon-type {
+        background-color: transparent;
+        border: solid 2px;
+
+        &:hover {
+          background-color: vars.$primary;
+        }
+      }
+
+      & .item {
+        &__go-back {
+          display: none;
+        }
+
+        &-card {
+          
+          &:hover {
+            cursor: pointer;
+          }
+
+          &__button-add:hover {
+            background-color: #fff;
+            color: vars.$purple;
+          }
+        }
+      }
+
+      & .item-list{
+        min-height: 300px;
+      }
+    }
+  }
+}

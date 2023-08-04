@@ -1,0 +1,60 @@
+@use '../../styles/vars';
+
+.modal {
+  position: relative;
+  background-color: vars.$dark-grey;
+  padding: vars.$gap-s;
+  display: flex;
+  width: 90%;
+  min-width: 300px;
+  max-width: 450px;
+  max-height: 700px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: vars.$gap-s;
+  border-radius: vars.$radius-m;
+
+  &-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #000000d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-xl {
+    height: 80%;
+  }
+  
+  &__button-close {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+    bottom: -5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+
+    &__icon {
+      color: vars.$white;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  &-error {
+    color: vars.$white;
+    margin: auto;
+    padding: vars.$gap-s vars.$gap-m;
+    border-radius: vars.$radius-l;
+    background-color: vars.$error;
+  }
+}
+
+

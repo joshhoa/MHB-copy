@@ -1,0 +1,173 @@
+@use '../../styles/vars';
+
+.loadout{ 
+  &-container {
+    width: 100%;
+    min-width: 320px;
+    max-width: 450px;
+    display: flex;
+    justify-content: space-between;
+    padding: vars.$gap-s;
+    border: vars.$white solid 2px;
+    border-radius: vars.$radius-s;
+    position: relative;
+  }
+  
+  &__main {
+    width: 80%;
+  }
+
+  &__header {
+    display: flex;
+    gap: vars.$gap-s;
+
+    &-identity {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      min-width: 200px;
+    }
+  }
+
+  &-aside {
+    display: flex;
+    flex-direction: column;
+    min-width: 80px;
+    gap: vars.$gap-s;
+  }
+  &-author {
+    font-size: vars.$font-s;
+  }
+  &-code {
+    display: flex;
+    align-items: center;
+    gap: vars.$gap-s;
+
+    &__description {
+      font-size: vars.$font-s;
+    }
+
+    &__copy-button {
+      background-color: transparent;
+      color: vars.$white;
+      border: none;
+      position: relative;
+
+      &:hover::before {
+        content: "Copy code";
+        width: 5rem;
+        border-radius: 5px;
+        position: absolute;
+        right: -5rem;
+        top: -.5rem;
+        background-color: #000000c0;
+        color: #fff;
+        padding: .5rem vars.$gap-s;
+      }
+    }
+
+    & .clicked {
+      color: vars.$primary;
+    }
+  }
+
+  &-description {
+    font-size: vars.$font-s;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$gap-m;
+  }
+  &__weapon-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  &__stats-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  &__footer {
+    width: 100%;
+
+    &__skill-list {
+      display: flex;
+      gap: vars.$gap-s;
+      display: flex;
+      flex-wrap: wrap;
+      gap: vars.$gap-s;
+      font-size: .8rem;
+
+    }
+
+    &__skill-tag {
+      background-color: vars.$white;
+      color: #fff;
+      text-shadow: #000000 0 0 8px;
+      border: none;
+      border-radius: vars.$radius-m;
+      padding: vars.$gap-xs vars.$gap-s;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    gap: 3px;
+  }
+
+  &__delete {
+    position: absolute;
+    right: -1.5rem;
+    top: 0;
+    translate: -50% -50%;
+    background-color: vars.$grey;
+    border: none;
+    padding: 3px;
+
+    &:hover::after {
+      content: "Delete";
+      width: 5rem;
+      border-radius: 5px;
+      position: absolute;
+      right: -5rem;
+      top: -.5rem;
+      background-color: #000000c0;
+      color: #fff;
+      padding: .5rem vars.$gap-s;
+    }
+
+    &-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      color: vars.$error;
+    }
+  }
+  &__edit {
+    position: absolute;
+    right: -1.5rem;
+    top: 1.6rem;
+    translate: -50% -50%;
+    background-color: vars.$grey;
+    border: none;
+    padding: 3px;
+
+    &:hover::after {
+      content: "Edit";
+      width: 5rem;
+      border-radius: 5px;
+      position: absolute;
+      right: -5rem;
+      top: -.5rem;
+      background-color: #000000c0;
+      color: #fff;
+      padding: .5rem vars.$gap-s;
+    }
+
+    &-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      color: rgb(132, 69, 250);
+    }
+  }
+}

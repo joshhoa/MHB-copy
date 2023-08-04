@@ -1,0 +1,42 @@
+{
+    "openapi": "3.0.0",
+    "components": {
+        "securitySchemes": {
+            "BasicAuth": {
+                "type": "http",
+                "scheme": "basic"
+            },
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Armor",
+            "description": "Everything about Armor"
+        },
+        {
+            "name": "Decoration",
+            "description": "Everything about Decoration"
+        },
+        {
+            "name": "Loadout",
+            "description": "Everything about Loadout"
+        },
+        {
+            "name": "Skill",
+            "description": "Everything about Skill"
+        },
+        {
+            "name": "User",
+            "description": "Everything about User"
+        },
+        {
+            "name": "Weapon",
+            "description": "Everything about Weapon"
+        }    
+    ]
+}

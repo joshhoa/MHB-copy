@@ -1,0 +1,25 @@
+@use '../../styles/vars';
+
+.stats {
+
+  &-container {
+    width: 100%;
+    border: solid 2px vars.$white;
+    border-radius: vars.$radius-m;
+    padding: vars.$gap-s;
+    display: flex;
+    flex-direction: column;
+    gap: vars.$gap-s;
+  }
+
+  &-title {
+    text-align: center;
+    background-color: vars.$grey;
+    position: relative;
+    top: -1rem;
+    width:fit-content;
+    padding: 0 vars.$gap-s;
+    font-weight: bold;
+    margin: auto;
+  }
+}
